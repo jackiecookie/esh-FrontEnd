@@ -3,15 +3,15 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+        /* 压缩优化图片大小 */
     imagemin: {
-      /* 压缩优化图片大小 */
       dist: {
         options: {
           optimizationLevel: 3
         },
         files: [{
           expand: true,
-          cwd: 'img/',
+          cwd: 'images/',
           src: ['**/*.{png,jpg,jpeg}'], // 优化 img 目录下所有 png/jpg/jpeg 图片
           dest: 'img/' // 优化后的图片保存位置，默认覆盖
         }]
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
     watch: {
       /* 监控文件变化并执行相应任务 */
       img: {
-        files: ['img/**/*.{png,jpg,jpeg}'],
+        files: ['images/**/*.{png,jpg,jpeg}'],
         options: {
           livereload: true
         }
@@ -39,6 +39,7 @@ module.exports = function(grunt) {
         },
         files: ['css/**/*.css']
       },
+      //监控js文件运行jshint任务
       js: {
         options: {
           livereload: true
@@ -46,6 +47,7 @@ module.exports = function(grunt) {
         files: ['js/**/*.js'],
         tasks: ['jshint']
       },
+      //监控html文件
       html: {
         options: {
           livereload: true
@@ -73,6 +75,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+ grunt.loadNpmTasks('grunt-contrib-imagemin');
 
  
   grunt.registerTask('default', ['watch']);
