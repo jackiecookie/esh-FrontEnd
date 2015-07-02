@@ -1,0 +1,17 @@
+{
+  "name": "esh-FrontEnd",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-contrib-jshint": "^0.11.1",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sprity": "^1.0.0",
+    "sprity": "^1.0.6"
+  },
+  "dependencies": {
+    "sprity": "^1.0.6",
+    "sprity-less": "^1.0.2"
+  }
+}

@@ -1,0 +1,11 @@
+.icon {
+  background-image: url("../images/sprite.PNG");
+}
+.icon-camera {
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  width: 408px;
+  height: 408px;
+}
