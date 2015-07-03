@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-        /* 压缩优化图片大小 */
+    /* 压缩优化图片大小 */
     imagemin: {
       dist: {
         options: {
@@ -11,20 +11,34 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'images/',
+          cwd: 'images/original',
           src: ['**/*.{png,jpg,jpeg}'], // 优化 img 目录下所有 png/jpg/jpeg 图片
-          dest: 'img/' // 优化后的图片保存位置，默认覆盖
+         dest: 'images/production' // 优化后的图片保存位置，默认覆盖
         }]
       }
     },
+    eshsprity: {
+      //输出任务
+      sprity: {}
+    },
     watch: {
-      /* 监控文件变化并执行相应任务 */
-      img: {
-        files: ['images/**/*.{png,jpg,jpeg}'],
+      /* 监控icon合并图片,生成less */
+      icon: {
+        files: ['images/icon/**/*.{png,jpg,jpeg}'],
         options: {
           livereload: true
-        }
+        },
+        tasks: ['eshsprity']
       },
+      // 监控图片文件夹压缩图片
+      img: {
+        files: ['images/original/**/*.{png,jpg,jpeg}'],
+        options: {
+          livereload: true
+        },
+        tasks: ['imagemin']
+      },
+      //less动态编译
       less: {
         files: ['less/**/*.less'],
         options: {
@@ -75,9 +89,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
- grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-eshsprity');
 
- 
+
   grunt.registerTask('default', ['watch']);
 
 };
