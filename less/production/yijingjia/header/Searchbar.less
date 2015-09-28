@@ -1,0 +1,96 @@
+ @import '../tongyong.less';
+@import '../../../sprite/Search/sprite.less';
+a,
+img
+{
+    border: 0;
+}
+.topsearch
+{
+    line-height: 13px;
+ 
+    magrin-top: 100px;
+}
+.searchbox
+{
+    width: 488px;
+    height: 44px;
+    .searchTxt
+    {
+        position: relative;
+        z-index: 20;
+
+        float: left;
+
+        width: 398px;
+        height: 40px;
+
+        border: 2px solid #c40e24;
+        border-right: 0;
+        background: #fff;
+        input
+        {
+            font-size: 13px;
+            line-height: 38px;
+
+            float: left;
+
+            width: 298px;
+            height: 38px;
+            margin-left: 10px;
+
+            color: #666;
+            border: 0;
+            outline: medium none;
+            background: #fff;
+        }
+        .searchMenu
+        {
+            float: left;
+            overflow: hidden;
+            .searchSelected
+            {
+                width: 90px;
+
+                cursor: pointer;
+
+                color: #333;
+                p
+                {
+                    font-size: 13px;
+                    line-height: 38px;
+
+                    float: left;
+
+                    padding: 0 8px 0 14px;
+                }
+                .searchSelectedtu
+                {
+                    float: left;
+
+                    margin-top: 16px;
+
+                    .sprite(@xiala);
+                    .icon-Search;
+                }
+            }
+        }
+    }
+    .searchBtn
+    {
+        float: left;
+        button
+        {
+            font-size: 16px;
+
+            cursor: pointer;
+            text-indent: -9999px;
+
+            color: #fff;
+            border: 0;
+
+            .sprite(@shous);
+            .icon-Search;
+        }
+    }
+}

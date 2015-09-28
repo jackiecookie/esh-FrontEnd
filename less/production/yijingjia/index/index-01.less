@@ -1,0 +1,200 @@
+@import '../../../production/yijingjia/index/qiehuan/sprite.less';
+
+@import '../../../production/yijingjia/index/hangyebeijing/sprite.less';
+
+@import '../../../production/yijingjia/index/pingtai/sprite.less';
+
+@border: 1px #d6d6d6 solid;
+@red:#c30e23;
+
+.main-01
+{
+    overflow: hidden;
+    .main01left
+    {
+        float: left;
+
+        width: 212px;
+        padding-top: 13px;
+        padding-bottom: 14px;
+
+        border: @border;
+        border-top: none;
+        li
+        {
+            line-height: 44px;
+
+            margin-left: 20px;
+
+            a:hover
+            {
+                color: @red;
+            }
+                a
+                {
+                    color: #333;
+                }
+        }
+    }
+    .main01center
+    {
+        float: left;
+
+        margin-top: 20px;
+        margin-left: 20px;
+        .ma01cen-top
+        {
+            position: relative;
+
+            width: 670px;
+            height: 292px;
+            background-color: red;
+            ul
+            {
+                position: absolute;
+                right: 13px;
+                bottom: 10px;
+
+                overflow: hidden;
+
+                li:hover
+                {
+                    .sprite(@qiehuan-red);
+                    .icon-qiehuan;
+                }
+                    li
+                    {
+                        float: left;
+
+                        margin: 0 2px;
+
+                        cursor: pointer;
+
+                        .sprite(@qiehuan-bai);
+                        .icon-qiehuan;
+                    }
+                        .dangqian
+                        {
+                            .sprite(@qiehuan-red);
+                            .icon-qiehuan;
+                        }
+            }
+        }
+        .ma01cen-bottom
+        {
+            overflow: hidden;
+
+            width: 670px;
+            dl
+            {
+                float: left;
+
+                margin-top: 23px;
+                margin-right: 54px;
+                margin-left: 20px;
+
+                text-align: center;
+                dt
+                {
+                    font-weight: bold;
+
+                    width: 63px;
+                    height: 50px;
+                    margin: 0 auto;
+
+                    background-position: center;
+                }
+                .hangye
+                {
+                    .sprite(@hangye);
+                    .icon-hangyebeijing;
+                }
+                .anquan
+                {
+                    .sprite(@anquan);
+                    .icon-hangyebeijing;
+                }
+                .caozuo
+                {
+                    .sprite(@caozuo);
+                    .icon-hangyebeijing;
+                }
+                .yongjin-02
+                {
+                    .sprite(@yongjin);
+                    .icon-hangyebeijing;
+                }
+                dd
+                {
+                    margin-top: 10px;
+                    p
+                    {
+                        line-height: 22px;
+
+                        color: #888;
+                        span
+                        {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+            .yongjin-01
+            {
+                margin-right: 0;
+                padding-right: 20;
+            }
+        }
+    }
+    .main01right
+    {
+        float: right;
+        li
+        {
+            width: 264px;
+            height: 134px;
+            margin-top: 20px;
+
+            border: @border;
+            p
+            {
+                line-height: 26px;
+
+                float: left;
+
+                margin-top: 40px;
+                margin-right: 12px;
+
+                color: #949494;
+                span
+                {
+                    font-size: 20px;
+
+                    color: #ff9600;
+                }
+            }
+            .pingtai-01
+            {
+                width: 66px;
+                height: 66px;
+                margin-top: 34px;
+                margin-left: 12px;
+            }
+            .lishi
+            {
+                .sprite(@lishi);
+                .icon-pingtai;
+            }
+            .zuori
+            {
+                .sprite(@zuori);
+                .icon-pingtai;
+            }
+            .renshu
+            {
+                .sprite(@renshu);
+                .icon-pingtai;
+            }
+        }
+    }
+}
